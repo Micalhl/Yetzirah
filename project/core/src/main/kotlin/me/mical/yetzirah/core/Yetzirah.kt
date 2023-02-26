@@ -1,5 +1,7 @@
 package me.mical.yetzirah.core
 
+import me.mical.yetzirah.core.marriage.MarriageManager
+import taboolib.common.platform.PlatformFactory
 import taboolib.module.configuration.Config
 import taboolib.module.configuration.Configuration
 import taboolib.platform.BukkitPlugin
@@ -18,5 +20,9 @@ object Yetzirah {
 
     val plugin by lazy {
         BukkitPlugin.getInstance()
+    }
+
+    fun getMarriageManager(): MarriageManager {
+        return PlatformFactory.getAPI()
     }
 }
